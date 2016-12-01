@@ -1,19 +1,19 @@
 package dta.chat.controller;
 
-import dta.chat.view.console.ChatConsoleView;
+import dta.chat.model.ChatConversationModel;
 
 public class ChatAuth implements ChatAuthController {
 
-	private ChatConsoleView view;
+	private ChatConversationModel model;
 
-	public ChatAuth(ChatConsoleView view) {
+	public ChatAuth(ChatConversationModel model) {
 		super();
-		this.view = view;
+		this.model = model;
 	}
 
 	@Override
 	public void authenticate(String login) {
-		view.setLogin(login);
+		model.setLogin(login);
 	}
 
 }
